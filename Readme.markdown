@@ -102,7 +102,7 @@ Open `http://localhost:5173`
 
 ## Adding a New Bank
 
-To add a new bank (e.g. HDFC), make changes in **4 places only**:
+To add a new bank (e.g. ICICI), make changes in **4 places only**:
 
 ### 1. `parser.py` — Add URL and parser function
 
@@ -112,13 +112,13 @@ BANK_URLS = {
     "SBI":   "...",
     "ICICI": "...",
     "Kotak": "...",
-    "HDFC":  "https://www.hdfcbank.com/..."   # ← ADD HERE
+    "ICICI":  "https://www.icicibank.com/..."   # ← ADD HERE
 }
 
 # Step 2: Write a parser function
-def parse_hdfc(html: str) -> BankFDData:
+def parse_icici(html: str) -> BankFDData:
     tables = get_tables(html)
-    bank = BankFDData(bank_name="HDFC", source_url=BANK_URLS["HDFC"], ...)
+    bank = BankFDData(bank_name="ICICI", source_url=BANK_URLS["ICICI"], ...)
     # parse tables → append FDRate objects to bank.rates
     return bank
 
@@ -127,7 +127,7 @@ PARSERS = {
     "SBI":   parse_sbi,
     "ICICI": parse_icici,
     "Kotak": parse_kotak,
-    "HDFC":  parse_hdfc,    # ← ADD HERE
+    "ICICI":  parse_icici,    # ← ADD HERE
 }
 ```
 
@@ -138,7 +138,7 @@ const COLORS = {
   SBI:   "#2563eb",
   ICICI: "#f59e0b",
   Kotak: "#10b981",
-  HDFC:  "#ef4444",   // ← ADD HERE
+  ICICI:  "#ef4444",   // ← ADD HERE
 };
 ```
 
