@@ -41,12 +41,6 @@ services:
     # Auto-deploy
     autoDeploy: true
     
-    # Disk storage for SQLite database
-    disk:
-      name: fd-tracker-data
-      mountPath: /opt/render/project/src/server
-      sizeGB: 1
-
   # ═══════════════════════════════════════════════════════════════════════
   # Frontend Service (React + Vite)
   # ═══════════════════════════════════════════════════════════════════════
