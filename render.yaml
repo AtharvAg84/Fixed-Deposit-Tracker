@@ -16,7 +16,7 @@ services:
       pip install --upgrade pip
       pip install -r requirements.txt
       pip install uvicorn fastapi
-      playwright install chromium
+      PLAYWRIGHT_BROWSERS_PATH=$PWD/ms-playwright playwright install chromium --with-deps || playwright install chromium
     
     # Start command
     startCommand: cd server && python bridge.py
@@ -25,6 +25,9 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.13.5
+      
+      - key: PLAYWRIGHT_BROWSERS_PATH
+        value: /opt/render/project/src/ms-playwright
       
       - key: GEMINI_API_KEY
         sync: false  # Set this in Render dashboard
