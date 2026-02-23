@@ -5,6 +5,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   preview: {
-    allowedHosts: ['fd-tracker-frontend.onrender.com']
+    // allowedHosts: ['fd-tracker-frontend.onrender.com']
   }
 })
+
+// export default defineConfig({
+//   plugins: [react()],
+//   preview: {
+//     allowedHosts: ['fd-tracker-frontend.onrender.com']
+//   }
+// })
