@@ -35,7 +35,10 @@ app = FastAPI(title="FD Rate Comparison Bridge")
 
 app.add_middleware(
     CORSMiddleware,
+<<<<<<< HEAD
    # allow_origins=["http://localhost:5173", "http://localhost:3000","https://fd-tracker-frontend.onrender.com"],
+=======
+>>>>>>> parent of 28f8a2c (after init)
     allow_origins=["http://localhost:5173", "http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
